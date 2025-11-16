@@ -3,27 +3,31 @@ package Java_Completo.Oop.Bank_Account.entities;
 public class Bank {
 
     private final int number;
-    private String name;
+    private String holder;
     private double balance;
 
-    public Bank(int number, String name) {
+    public Bank(int number, String holder) {
         this.number = number;
-        this.name = name;
+        this.holder = holder;
+    }
+
+    public Bank(int number, String holder, double initialDeposit) {
+        this.number = number;
+        this.holder = holder;
+        deposit(initialDeposit);
     }
 
     public int getNumber() {
         return number;
     }
 
-    public String getName() {
-        return name;
+    public String getHolder() {
+        return holder;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHolder(String holder) {
+        this.holder = holder;
     }
-
-
 
     public void deposit(double deposit) {
         this.balance += deposit;
@@ -35,9 +39,8 @@ public class Bank {
 
     @Override
     public String toString() {
-        return "Account data: \n" +
-                "Account: " + getNumber() +
-                ", Holder: " + getName() +
+        return "Account: " + getNumber() +
+                ", Holder: " + getHolder() +
                 ", Balance: " + String.format("%.2f", balance);
     }
 }

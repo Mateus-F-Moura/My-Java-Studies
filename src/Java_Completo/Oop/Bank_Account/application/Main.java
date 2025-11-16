@@ -17,23 +17,22 @@ public class Main {
             System.out.print("Create a account number: ");
             int number = sc.nextInt();
             sc.nextLine();
-
             System.out.print("Enter a name for your account: ");
-            String name = sc.nextLine();
-
-            Bank account = new Bank(number, name);
+            String holder = sc.nextLine();
 
             System.out.println();
             System.out.print("Wanna make a initial deposit? (1 - Yes / 2 - Skip): ");
             int option = sc.nextInt();
 
-            double value;
+            double initialDeposit = 0;
             if (option == 1) {
                 System.out.print("Enter initial deposit: ");
-                value = sc.nextDouble();
-                account.deposit(value);
+                initialDeposit = sc.nextDouble();
             }
-            System.out.println(account);
+
+            Bank account = new Bank(number, holder, initialDeposit);
+            System.out.println();
+            System.out.println("---Account data---\n" + account);
 
             do {
                 System.out.println();
@@ -50,18 +49,18 @@ public class Main {
                         break;
                     case 1:
                         System.out.print("Enter name: ");
-                        name = sc.nextLine();
-                        account.setName(name);
+                        holder = sc.nextLine();
+                        account.setHolder(holder);
                         break;
                     case 2:
                         System.out.print("Enter how much to deposit: ");
-                        value = sc.nextDouble();
-                        account.deposit(value);
+                        initialDeposit = sc.nextDouble();
+                        account.deposit(initialDeposit);
                         break;
                     case 3:
                         System.out.print("Enter how much to withdrawn ($ 5.00 taxes): ");
-                        value = sc.nextDouble();
-                        account.withdraw(value);
+                        initialDeposit = sc.nextDouble();
+                        account.withdraw(initialDeposit);
                         break;
                     default:
                         System.out.println();
@@ -69,7 +68,8 @@ public class Main {
                         break;
                 }
 
-                System.out.println(account);
+                System.out.println();
+                System.out.println("---Account data update---\n" + account);
             } while (option != 0);
 
         }
