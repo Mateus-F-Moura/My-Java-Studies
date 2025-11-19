@@ -8,54 +8,34 @@ All source code is located inside the `/src` folder.
 
 The code is organized by fundamental programming concepts and paradigms:
 
-### 📊 /src/Arrays
-Contains **6 exercises** focusing on array manipulation, including:
-- Array selection and traversal
-- Statistical calculations (averages)
-- Practical applications (banknote counting)
-- Fundamental array operations
+### 📊 Arrays
+Exercises focusing on array manipulation, including selection and traversal, statistical calculations, practical applications, and fundamental operations.
 
-### 🔀 /src/Conditionals
-Includes **9 exercises** covering conditional structures:
-- If-else statements
-- Switch-case constructs
-- Ternary operators
-- Complex decision-making logic
+### 🔀 Conditionals
+Exercises covering conditional structures such as if-else statements, switch-case constructs, ternary operators, and complex decision-making logic.
 
-### 🔄 /src/Loops
-Features **11 exercises** exploring iteration structures:
-- For loops
-- While loops
-- Do-while loops
-- Nested loops and complex iterations
-- Real-world problem-solving (e.g., Identifying Tea)
+### 🔄 Loops
+Exercises exploring iteration structures including for loops, while loops, do-while loops, nested loops, and real-world problem-solving applications.
 
-### 🎯 /src/Oop
-Comprises **9 project folders** demonstrating Object-Oriented Programming principles:
-- `Bank_Account` - Banking system simulation
-- `Dollar` - Currency conversion
-- `Heron_Formula` - Geometric calculations
-- `Rectangle` - Shape modeling
-- `Salary` - Employee compensation management
-- `Sphere` - 3D geometry
-- `Stock` & `Stock_2` - Inventory management systems
-- `Student` - Academic records management
+### 🎯 Oop (Object-Oriented Programming)
+Projects demonstrating core OOP principles through practical implementations:
+- Banking systems and financial operations
+- Geometric calculations and shape modeling
+- Inventory and stock management
+- Employee and student record systems
 
-Each project implements key OOP concepts like encapsulation, classes, objects, constructors, and methods.
+Each project implements key concepts like encapsulation, classes, objects, constructors, and methods.
 
-### ⚡ /src/Sequentially
-Provides **6 exercises** on sequential programming:
-- Basic input/output operations
-- Sequential logic flow
-- Step-by-step problem solving
-- Fundamental algorithmic thinking
+### ⚡ Sequentially
+Exercises on sequential programming fundamentals, including basic input/output operations, sequential logic flow, and step-by-step problem solving.
 
 ## 🎯 Objective
 
 To maintain an organized history of my studies, facilitate future reference, and publicly demonstrate my dedication and evolution in the Java language and development ecosystem.
 
-## 📊 Statistics
+## 📚 Learning Focus
 
-- **Total exercises:** 41 individual files + 9 OOP projects
-- **Topics covered:** Arrays, Conditionals, Loops, OOP, Sequential Programming
-- **Focus:** Practical problem-solving and hands-on learning
+- **Practical problem-solving** through hands-on coding
+- **Core Java fundamentals** from basics to advanced topics
+- **Object-Oriented Programming** principles and best practices
+- **Algorithm development** and computational thinking
