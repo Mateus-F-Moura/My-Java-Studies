@@ -19,10 +19,9 @@ public class Main {
                 sc.nextLine();
 
                 String name = sc.nextLine();
-                int quantity = sc.nextInt();
                 double price = sc.nextDouble();
 
-                vector[i] = new Product(name, quantity, price);
+                vector[i] = new Product(name, price);
             }
 
             double sum = 0.0;
