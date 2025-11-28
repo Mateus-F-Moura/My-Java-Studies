@@ -12,14 +12,12 @@ public class Sum_of_Vectors {
 
             int[][] values = new int[n][2];
 
-            System.out.println("Type the values of vector A:");
-            for (int i = 0; i < values.length; i++) {
-                values[i][0] = sc.nextInt();
-            }
-
-            System.out.println("Type the values of vector B:");
-            for (int i = 0; i < values.length; i++) {
-                values[i][1] = sc.nextInt();
+            String[] names = {"A", "B"};
+            for (int j = 0; j < 2; j++) {
+                System.out.println("Type the values of vector " + names[j] + ":");
+                for (int i = 0; i < values.length; i++) {
+                    values[i][j] = sc.nextInt();
+                }
             }
 
             int[] sum = new int[n];
