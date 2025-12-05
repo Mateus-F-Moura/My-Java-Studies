@@ -1,6 +1,6 @@
-package Arrays.People_Data.application;
+package Arrays.PeopleData.application;
 
-import Arrays.People_Data.entities.People;
+import Arrays.PeopleData.entities.People;
 
 import java.util.Locale;
 import java.util.Scanner;

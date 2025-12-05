@@ -1,4 +1,4 @@
-package Arrays.People_Data.entities;
+package Arrays.PeopleData.entities;
 
 public class People {
 
