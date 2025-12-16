@@ -3,7 +3,6 @@ package Enums.Orders.entities;
 import Enums.Orders.entities.enums.OrderStatus;
 
 import java.time.Instant;
-import java.util.Date;
 
 public class Order {
     private final Integer id;
