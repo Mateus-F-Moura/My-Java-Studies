@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Post {
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").withZone(ZoneId.systemDefault());
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").withZone(ZoneId.systemDefault());
     private Instant moment;
     private String title;
     private String content;
     private Integer like = 0;
-    private List<Comment> comments = new ArrayList<>();
+    private final List<Comment> comments = new ArrayList<>();
 
     public Post(Instant moment, String title, String content) {
         this.moment = moment;
@@ -74,9 +74,15 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Moment: " + formatter.format(moment) + "\n" +
-                "Title: " + title + "\n" +
-                "Content: " + content + "\n" +
-                "Like(s): " + like;
+        StringBuilder sb = new StringBuilder();
+        sb.append(title).append("\n");
+        sb.append(like);
+        sb.append(" Likes - ");
+        sb.append(formatter.format(moment)).append("\n");
+        sb.append("Comments:\n");
+        for (Comment c : comments) {
+            sb.append(c.getText()).append("\n");
+        }
+        return sb.toString();
     }
 }

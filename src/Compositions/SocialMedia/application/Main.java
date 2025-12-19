@@ -29,21 +29,26 @@ public class Main {
 
                 System.out.print("Give a like on this post? (true / false): ");
                 boolean like = sc.nextBoolean();
+                sc.nextLine();
 
                 post.addLike(like);
 
                 boolean makeComment;
-                do {
+                while (true) {
                     System.out.print("Make a comment? (true / false): ");
                     makeComment = sc.nextBoolean();
+                    sc.nextLine();
+
+                    if (!makeComment) {
+                        break;
+                    }
 
                     System.out.print("Text: ");
-                    sc.nextLine();
                     String text = sc.nextLine();
                     Comment comment = new Comment(text);
 
                     post.addComment(comment);
-                } while (makeComment);
+                }
 
                 posts.add(post);
 
@@ -55,13 +60,10 @@ public class Main {
 
             int i = 1;
             for (Post p : posts) {
-                System.out.println();
                 System.out.println("===" + i +"# Post===");
+
                 System.out.println(p);
-                System.out.println("Comment(s): ");
-                for (Comment c : p.getComments()) {
-                    System.out.println(c.getText());
-                }
+
                 i++;
             }
 
