@@ -2,6 +2,7 @@ package Heritage.BankAccount.application;
 
 import Heritage.BankAccount.entities.Account;
 import Heritage.BankAccount.entities.BusinessAccount;
+import Heritage.BankAccount.entities.SavingsAccount;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -19,17 +20,26 @@ public class Main {
             System.out.print("Holder: ");
             String holder = sc.nextLine();
 
-            System.out.print("Is it a business account? (y/n): ");
-            char type = sc.next().toLowerCase().charAt(0);
+            System.out.println("Select account type:");
+            System.out.println("1 - Common Account");
+            System.out.println("2 - Business Account");
+            System.out.println("3 - Savings Account");
+            System.out.print("Option: ");
+            int typeOption = sc.nextInt();
 
-            Account account;
-            if (type == 'y') {
-                System.out.print("Loan limit: ");
-                double loanLimit = sc.nextDouble();
-                account = new BusinessAccount(number, holder, loanLimit);
-            } else {
-                account = new Account(number, holder);
-            }
+            Account account = switch (typeOption){
+                case 2 -> {
+                    System.out.print("Loan limit: ");
+                    double loanLimit = sc.nextDouble();
+                    yield new BusinessAccount(number, holder, loanLimit);
+                }
+                case 3 -> {
+                    System.out.print("Interest rate: ");
+                    double interestRate = sc.nextDouble();
+                    yield new SavingsAccount(number, holder, interestRate);
+                }
+                default -> new Account(number, holder);
+            };
 
             int option = -1;
             while (option != 0) {
